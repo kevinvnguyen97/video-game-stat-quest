@@ -19,10 +19,10 @@ function NavigationBar() {
         <Button variant="ghost" paddingX={3}>
           Home
         </Button>
-        <Button variant="ghost" paddingX={3}>
+        <Button variant="ghost" paddingX={3} disabled>
           My Favorites
         </Button>
-        <Button variant="ghost" paddingX={3}>
+        <Button variant="ghost" paddingX={3} disabled>
           Other Favorites
         </Button>
       </HStack>
