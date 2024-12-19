@@ -10,7 +10,8 @@
       "@components/*": ["components/*"],
       "@assets/*": ["assets/*"],
       "@pages/*": ["pages/*"],
-      "@constants/*": ["constants/*"]
+      "@constants/*": ["constants/*"],
+      "@api/*": ["api/*"]
     },
     "baseUrl": "src",
 

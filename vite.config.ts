@@ -25,6 +25,10 @@ export default defineConfig({
         find: "@constants",
         replacement: fileURLToPath(new URL("./src/constants", import.meta.url)),
       },
+      {
+        find: "@api",
+        replacement: fileURLToPath(new URL("./src/api", import.meta.url)),
+      },
     ],
   },
 });
