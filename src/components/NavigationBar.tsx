@@ -36,7 +36,7 @@ function NavigationBar() {
           <PopoverBody>Login stuff</PopoverBody>
           <PopoverFooter>
             <ColorModeButton />
-            <Button>Log Out</Button>
+            <Button disabled>Log Out</Button>
           </PopoverFooter>
         </PopoverContent>
       </PopoverRoot>
