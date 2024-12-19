@@ -1,18 +1,16 @@
 import { Image, Input, Text, Box, Group, IconButton } from "@chakra-ui/react";
 import { APP_NAME } from "@constants/appName";
-import { searchGame } from "@api/igdb";
 import { useLayoutEffect, useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
+  const navigate = useNavigate();
+  const [input, setInput] = useState("");
+
   useLayoutEffect(() => {
     window.document.title = `Home - ${APP_NAME}`;
   }, []);
-
-  const [input, setInput] = useState("");
-  const searchForGame = () => {
-    searchGame(input);
-  };
 
   return (
     <Box display="flex" flexDirection="column" alignItems="center">
@@ -28,7 +26,11 @@ export const Home = () => {
           variant="subtle"
           size="xl"
         />
-        <IconButton onClick={searchForGame} size="xl" colorPalette="blue">
+        <IconButton
+          onClick={() => navigate(`/search/${input}`)}
+          size="xl"
+          colorPalette="blue"
+        >
           <AiOutlineSearch />
         </IconButton>
       </Group>
