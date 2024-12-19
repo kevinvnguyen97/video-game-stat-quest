@@ -13,12 +13,7 @@ import { ColorModeButton } from "@components/ui/color-mode";
 
 function NavigationBar() {
   return (
-    <HStack
-      display="flex"
-      height={30}
-      padding={10}
-      justifyContent="space-between"
-    >
+    <HStack display="flex" height={16} justifyContent="space-between">
       <HStack spaceX={0}>
         <Image src="/src/assets/controller_logo.png" width={10} height="auto" />
         <Button variant="ghost" paddingX={3}>

@@ -1,11 +1,15 @@
-import { Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import "./App.css";
-import NavigationBar from "./components/NavigationBar";
+import NavigationBar from "@components/NavigationBar";
+import { Home } from "@pages/Home";
 
 function App() {
   return (
     <>
       <NavigationBar />
+      <Box>
+        <Home />
+      </Box>
     </>
   );
 }
