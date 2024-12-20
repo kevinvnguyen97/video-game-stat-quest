@@ -1,13 +1,9 @@
-import { Image, Input, Text, Box, Group, IconButton } from "@chakra-ui/react";
+import { Image, Text, Box } from "@chakra-ui/react";
+import { GameSearch } from "@components/GameSearch";
 import { APP_NAME } from "@constants/appName";
-import { useLayoutEffect, useState } from "react";
-import { AiOutlineSearch } from "react-icons/ai";
-import { useNavigate } from "react-router-dom";
+import { useLayoutEffect } from "react";
 
 export const Home = () => {
-  const navigate = useNavigate();
-  const [input, setInput] = useState("");
-
   useLayoutEffect(() => {
     window.document.title = `Home - ${APP_NAME}`;
   }, []);
@@ -18,22 +14,7 @@ export const Home = () => {
         {APP_NAME}
       </Text>
       <Image src="/src/assets/video_game_controller.gif" marginX="auto" />
-      <Group width="100%" maxWidth={500} attached>
-        <Input
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Search for a game"
-          variant="subtle"
-          size="xl"
-        />
-        <IconButton
-          onClick={() => navigate(`/search/${input}`)}
-          size="xl"
-          colorPalette="blue"
-        >
-          <AiOutlineSearch />
-        </IconButton>
-      </Group>
+      <GameSearch />
     </Box>
   );
 };
